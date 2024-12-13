@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {ResultContext} from "../contexts/ResultContext.jsx";
 
 const Multiplicacion = ({num1, num2}) => {
+    const { result, setResult } = useContext(ResultContext);
 
     const multiplicar = () => {
-        console.log(num1 * num2);
+        setResult(num1 * num2);
     }
 
     return (
