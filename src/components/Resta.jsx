@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ResultContext } from "../contexts/ResultContext";
 
 const Resta = ({ num1, num2 }) => {
-  return <div>Resta</div>;
+  const { result, setResult } = useContext(ResultContext);
+  return <div onClick={() => setResult(num1 + num2)}>Resta</div>;
 };
 
 export default Resta;
